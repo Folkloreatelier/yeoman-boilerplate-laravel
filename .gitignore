@@ -38,3 +38,5 @@ publish
 
 #
 node_modules
+
+public/js/main-build.js
