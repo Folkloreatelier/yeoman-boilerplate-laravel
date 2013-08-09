@@ -53,6 +53,7 @@ return array(
 	*/
 
 	'locale' => 'fr',
+	'languages' => array('fr','en'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -113,6 +114,9 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+
+		'Teepluss\Asset\AssetServiceProvider',
+		'Bkwld\Croppa\CroppaServiceProvider'
 
 	),
 
@@ -178,6 +182,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+
+		'Asset' => 'Teepluss\Asset\Facades\Asset'
 
 	),
 
