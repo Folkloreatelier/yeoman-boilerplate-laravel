@@ -1,3 +1,5 @@
+'use strict';
+
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;
@@ -31,8 +33,8 @@
           window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
     }
 
-    if (!window.requestAnimationFrame)
-        window.requestAnimationFrame = function(callback, element) {
+    if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = function(callback) {
             var currTime = new Date().getTime();
             var timeToCall = Math.max(0, 16 - (currTime - lastTime));
             var id = window.setTimeout(function() { callback(currTime + timeToCall); },
@@ -40,9 +42,11 @@
             lastTime = currTime + timeToCall;
             return id;
         };
+    }
 
-    if (!window.cancelAnimationFrame)
+    if (!window.cancelAnimationFrame) {
         window.cancelAnimationFrame = function(id) {
             clearTimeout(id);
         };
+    }
 }());

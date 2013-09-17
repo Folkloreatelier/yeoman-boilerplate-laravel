@@ -10,6 +10,8 @@ function(
 
 ) {
 
+	'use strict';
+
 	var App = {
 
 		'router' : null,
@@ -22,7 +24,7 @@ function(
 
 			App.initLayout();
 
-  			Backbone.history.start({pushState: true});
+			Backbone.history.start({pushState: true});
 
 		},
 
@@ -31,7 +33,7 @@ function(
 			var router = App.router = new Backbone.Router();
 
 			//All pages
-			router.route("*path", "home", function(path){
+			router.route('*path', 'home', function(path){
 
 				
 
