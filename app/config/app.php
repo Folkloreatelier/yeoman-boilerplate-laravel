@@ -117,7 +117,6 @@ return array(
 
 		'Teepluss\Asset\AssetServiceProvider',
 		'Bkwld\Croppa\CroppaServiceProvider'
-
 	),
 
 	/*
@@ -184,7 +183,6 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 
 		'Asset' => 'Teepluss\Asset\Facades\Asset'
-
 	),
 
 );
