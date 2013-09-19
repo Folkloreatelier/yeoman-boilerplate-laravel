@@ -57,6 +57,11 @@ class Photo extends Eloquent {
 		//Move file
 		$file->move($destinationPath.'/'.$folder, $filename);
 
+		//Fix permissions problem in local
+		if(App::environment() == 'local') {
+			chmod($destinationPath.'/'.$folder.'/'.$filename,0777);
+		}
+
 		//Save filename
 		$item->fill(array(
 			'filename' => $folder.'/'.$filename
