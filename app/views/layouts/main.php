@@ -4,7 +4,8 @@
 	$description = !isset($description) ? trans('meta.description'):$description;
 	$thumbnail = !isset($thumbnail) ? ('http://'.$_SERVER['HTTP_HOST'].'/img/facebook.jpg'):$thumbnail;
 
-?><!--
+?><!doctype html>
+<!--
 
 
 MMMMMMMMMN  :hNMMMMMNd/  yMM       `MMMo .hMMNs. dMM        +dNMMMMMNh-  mMMMMMMMmy`  dMMMMMMMMM
@@ -34,7 +35,6 @@ iTerm
 zsh 
 
 -->
-<!doctype html>
 <!--[if IE ]> <html class="ie" lang="<?=$language?>"> <![endif]-->
 <!--[if !(IE) ]><!--> <html lang="<?=$language?>"> <!--<![endif]-->
 <head>
