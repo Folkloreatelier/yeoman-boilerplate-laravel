@@ -41,7 +41,6 @@ zsh
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta http-equiv="content-language" content="<?=$language?>-ca">
 
 	<title><?=$title?></title>
 	<meta name="description" content="<?=$description?>">
