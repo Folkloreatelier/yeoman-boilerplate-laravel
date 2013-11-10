@@ -1,10 +1,4 @@
-<?php
-
-	$title = !isset($title) ? trans('meta.title'):$title;
-	$description = !isset($description) ? trans('meta.description'):$description;
-	$thumbnail = !isset($thumbnail) ? ('http://'.$_SERVER['HTTP_HOST'].'/img/facebook.jpg'):$thumbnail;
-
-?><!doctype html>
+<!doctype html>
 <!--
 
 
@@ -51,8 +45,10 @@ zsh
 	<link rel="icon" href="/favicon.gif" type="image/gif">
 
 	<!-- Open Graph meta -->
-	<meta property="og:locale" content="<?=$language?>_CA"> 
+	<meta property="og:locale" content="<?=$language?>_CA">
+	<?php if(isset($thumbnail)) { ?>
 	<meta property="og:image" content="<?=$thumbnail?>">
+	<?php } ?>
 	<meta property="og:title" content="<?=$title?>">
 	<meta property="og:type" content="website">
 	<meta property="og:description" content="<?=$description?>">

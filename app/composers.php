@@ -3,7 +3,7 @@
 View::share('language', Config::get('app.locale'));
 View::share('otherLanguage', Config::get('app.locale') == 'fr' ? 'en':'fr');
 
-View::composer(array('layouts.main'), function($view) {
+View::creator(array('layouts.main'), function($view) {
 
 	$headContainer = Asset::container('head');
 	$headContainer->add('modernizr','js/components/modernizr/modernizr.js');
@@ -19,6 +19,8 @@ View::composer(array('layouts.main'), function($view) {
 	}
 
 	$view->with(array(
+		'title' => trans('meta.title'),
+		'description' => trans('meta.description'),
 		'route' => Route::currentRouteName()
 	));
 
