@@ -7,6 +7,7 @@
  */
 Route::get('/', array(
 	'as' => 'home',
+	'before' => 'locale:fr',
 	'uses' => 'HomeController@index'
 ));
 

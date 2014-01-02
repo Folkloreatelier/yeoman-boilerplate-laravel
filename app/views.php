@@ -18,7 +18,7 @@ View::creator(array('layouts.main'), function($view) {
 	$view->with(array(
 		'title' => trans('meta.title'),
 		'description' => trans('meta.description'),
-		'route' => Route::current()
+		'route' => Route::current()->getName()
 	));
 
 });
