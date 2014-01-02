@@ -4,9 +4,9 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.0.*",
+		"laravel/framework": "4.1.*",
 		"teepluss/asset": "dev-master",
-		"bkwld/croppa": "~2.0"
+		"bkwld/croppa": "3.0.*"
 	},
 	"autoload": {
 		"classmap": [

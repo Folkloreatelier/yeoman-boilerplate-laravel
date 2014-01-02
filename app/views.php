@@ -1,8 +1,5 @@
 <?php
 
-View::share('language', Config::get('app.locale'));
-View::share('otherLanguage', Config::get('app.locale') == 'fr' ? 'en':'fr');
-
 View::creator(array('layouts.main'), function($view) {
 
 	$headContainer = Asset::container('head');
@@ -21,7 +18,7 @@ View::creator(array('layouts.main'), function($view) {
 	$view->with(array(
 		'title' => trans('meta.title'),
 		'description' => trans('meta.description'),
-		'route' => Route::currentRouteName()
+		'route' => Route::current()
 	));
 
 });
