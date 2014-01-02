@@ -1,6 +1,7 @@
 <?php
 
-View::creator(array('layouts.main'), function($view) {
+View::creator(array('layouts.main'), function($view)
+{
 
 	$headContainer = Asset::container('head');
 	$headContainer->add('modernizr','js/components/modernizr/modernizr.js');
