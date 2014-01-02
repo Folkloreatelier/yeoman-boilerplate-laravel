@@ -109,7 +109,7 @@ return array(
         'Illuminate\Workbench\WorkbenchServiceProvider',
 
 		'Teepluss\Asset\AssetServiceProvider',
-		'Bkwld\Croppa\CroppaServiceProvider'
+		'Bkwld\Croppa\ServiceProvider'
 	),
 
 	/*
