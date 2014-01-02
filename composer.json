@@ -33,5 +33,21 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "dev"
+	"minimum-stability": "dev",
+
+
+	"repositories": [
+	    {
+	        "type":"package",
+	        "package": {
+	          "name": "teepluss/asset",
+	          "version":"dev-master",
+	          "source": {
+	              "url": "https://github.com/Folkloreatelier/laravel4-asset.git",
+	              "type": "git",
+	              "reference":"master"
+	            }
+	        }
+	    }
+	]
 }
