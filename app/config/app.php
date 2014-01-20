@@ -176,6 +176,7 @@ return array(
         'Validator'       => 'Illuminate\Support\Facades\Validator',
         'View'            => 'Illuminate\Support\Facades\View',
 
+		'Croppa' => 'Bkwld\Croppa\Facade',
 		'Asset' => 'Teepluss\Asset\Facades\Asset'
 	),
 
