@@ -1,12 +1,16 @@
 define(
 [
-	'jquery','underscore','backbone'
+	'jquery','underscore','backbone',
+
+	'app/router'
 
 ],
 
 function(
 
-	$,_,Backbone
+	$,_,Backbone,
+
+	Router
 
 ) {
 
@@ -30,14 +34,7 @@ function(
 
 		'initRouter' : function() {
 
-			var router = App.router = new Backbone.Router();
-
-			//All pages
-			router.route('*path', 'home', function(path){
-
-				
-
-			});
+			var router = App.router = new Router();
 
 		},
 

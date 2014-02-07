@@ -6,7 +6,6 @@ require.config({
         'underscore': 'components/underscore/underscore-min',
         'backbone': 'components/backbone/backbone',
 
-        'app' : 'app/app',
         'controllers' : 'app/controllers',
         'views' : 'app/views',
         'models' : 'app/models',
@@ -26,7 +25,7 @@ require(
 [
 	'jquery','underscore','backbone',
 
-    'app'
+    'app/app'
 
 ], function ($,_,Backbone,App) {
 
