@@ -109,7 +109,7 @@ return array(
         'Illuminate\Workbench\WorkbenchServiceProvider',
 
 		'Teepluss\Asset\AssetServiceProvider',
-		'Bkwld\Croppa\ServiceProvider'
+		'Folklore\Image\ImageServiceProvider'
 	),
 
 	/*
@@ -176,7 +176,7 @@ return array(
         'Validator'       => 'Illuminate\Support\Facades\Validator',
         'View'            => 'Illuminate\Support\Facades\View',
 
-		'Croppa' => 'Bkwld\Croppa\Facade',
+		'Image' => 'Folklore\Image\Facades\Image',
 		'Asset' => 'Teepluss\Asset\Facades\Asset'
 	),
 

@@ -6,7 +6,7 @@
 	"require": {
 		"laravel/framework": "4.1.*",
 		"teepluss/asset": "dev-master",
-		"bkwld/croppa": "3.0.*"
+		"folklore/image": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
