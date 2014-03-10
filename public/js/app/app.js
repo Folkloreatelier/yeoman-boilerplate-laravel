@@ -28,7 +28,16 @@ function(
 
 			App.initLayout();
 
-			Backbone.history.start({pushState: true});
+			if (!Modernizr.history) {
+			    Backbone.history.start({
+			    	pushState: true,
+			    	hashChange: false
+			    });
+			} else {
+			    Backbone.history.start({
+			    	pushState: true
+			    });
+			}
 
 		},
 
