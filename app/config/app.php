@@ -68,6 +68,8 @@ return array(
 
 	'key' => md5('Boilerplate Folklore Yeah!'),
 
+	'cipher' => MCRYPT_RIJNDAEL_128,
+
 	/*
 	|--------------------------------------------------------------------------
 	| Autoloaded Service Providers
