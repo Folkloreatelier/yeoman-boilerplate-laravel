@@ -1,9 +1,9 @@
 require.config({
 
     paths: {
-        'jquery': 'components/jquery/jquery.min',
+        'jquery': 'components/jquery/jquery',
         'text': 'components/requirejs-text/text',
-        'underscore': 'components/underscore/underscore-min',
+        'underscore': 'components/underscore/underscore',
         'backbone': 'components/backbone/backbone',
 
         'controllers' : 'app/controllers',
