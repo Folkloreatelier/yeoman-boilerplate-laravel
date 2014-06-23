@@ -30,12 +30,12 @@ function(
 
 			if (!Modernizr.history) {
 			    Backbone.history.start({
-			    	pushState: true,
-			    	hashChange: false
+					pushState: true,
+					hashChange: false
 			    });
 			} else {
 			    Backbone.history.start({
-			    	pushState: true
+					pushState: true
 			    });
 			}
 
@@ -81,7 +81,7 @@ function(
 
 		initLayout: function() {
 
-			
+
 
 		}
 
