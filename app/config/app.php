@@ -53,7 +53,7 @@ return array(
 	*/
 
 	'locale' => 'fr',
-	'available_locale' => array('fr','en'),
+	'locale_available' => array('fr','en'),
 
 	/*
 	|--------------------------------------------------------------------------

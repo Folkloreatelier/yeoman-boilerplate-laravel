@@ -10,7 +10,7 @@
 */
 Route::filter('locale',  function($route, $request, $lang = 'auto')
 {
-    if($lang != 'auto' && in_array($lang , Config::get('app.available_locale')))
+    if($lang != 'auto' && in_array($lang , Config::get('app.locale_available')))
     {
         App::setLocale($lang);
     }
@@ -18,7 +18,7 @@ Route::filter('locale',  function($route, $request, $lang = 'auto')
     {
         $browser_lang = !empty($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtok(strip_tags($_SERVER['HTTP_ACCEPT_LANGUAGE']), ',') : '';
         $browser_lang = substr($browser_lang, 0,2);
-        $userLang = (in_array($browser_lang, Config::get('app.available_locale'))) ? $browser_lang : Config::get('app.locale');
+        $userLang = (in_array($browser_lang, Config::get('app.locale_available'))) ? $browser_lang : Config::get('app.locale');
         App::setLocale($userLang);
     }
 });
@@ -33,8 +33,8 @@ Route::filter('locale',  function($route, $request, $lang = 'auto')
 */
 Event::listen('locale.changed', function($locale)
 {
-    View::share('language', Config::get('app.locale'));
-    View::share('otherLanguage', Config::get('app.locale') == 'fr' ? 'en':'fr');
+    View::share('locale', Config::get('app.locale'));
+    View::share('otherLocale', Config::get('app.locale') == 'fr' ? 'en':'fr');
 });
 
 /*

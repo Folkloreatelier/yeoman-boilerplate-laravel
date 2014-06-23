@@ -4,8 +4,8 @@
 
 MMMMMMMMMN  :hNMMMMMNd/  yMM       `MMMo .hMMNs. dMM        +dNMMMMMNh-  mMMMMMMMmy`  dMMMMMMMMM
 MMMd        mMMm+++dMMM` yMM       `MMMs NMNy.   dMM       .MMMh+++NMMd  mMMm  oMMMo  dMMN
-MMMdsssso   NMMh   sMMM` yMM       `MMMMMMMh.    dMM       .MMM+   dMMd  mMMmoosMMM+  dMMNdddds 
-MMMNddddh   NMMh   sMMM` yMM       `MMMMh MMNy   dMM       .MMM+   dMMd  mMMNmNMMM+   dMMNsssss 
+MMMdsssso   NMMh   sMMM` yMM       `MMMMMMMh.    dMM       .MMM+   dMMd  mMMmoosMMM+  dMMNdddds
+MMMNddddh   NMMh   sMMM` yMM       `MMMMh MMNy   dMM       .MMM+   dMMd  mMMNmNMMM+   dMMNsssss
 MMMy`````   mMMNsosmMMN` yMMoooooo `MMMs  -mMMh  dMMoooooo .MMMdoosNMMh  mMMd`.yMMN/  dMMM
 NNNs        -ymNNNNNmh:  yNNNNNNNN `NNNo   hNNh  hNNNNNNNN  /hmNNNNNmy.  dNNh  `NNNo  hNNNNNNNNN
 
@@ -26,11 +26,11 @@ Sass (http://requirejs.org/)
 *** Tools ****
 Sublime Text 3 (http://www.sublimetext.com/3)
 iTerm
-zsh 
+zsh
 
 -->
-<!--[if IE ]> <html class="ie" lang="<?=$language?>"> <![endif]-->
-<!--[if !(IE) ]><!--> <html lang="<?=$language?>"> <!--<![endif]-->
+<!--[if IE ]> <html class="ie" lang="<?=$locale?>"> <![endif]-->
+<!--[if !(IE) ]><!--> <html lang="<?=$locale?>"> <!--<![endif]-->
 <head>
 
 	<meta charset="utf-8">
@@ -45,7 +45,7 @@ zsh
 	<link rel="icon" href="/favicon.gif" type="image/gif">
 
 	<!-- Open Graph meta -->
-	<meta property="og:locale" content="<?=$language?>_CA">
+	<meta property="og:locale" content="<?=$locale?>_CA">
 	<?php if(isset($thumbnail)) { ?>
 	<meta property="og:image" content="<?=$thumbnail?>">
 	<?php } ?>
@@ -59,7 +59,7 @@ zsh
 
 	<!-- Head Javascript -->
 	<script type="text/javascript">
-		var LANGUAGE = "<?=$language?>";
+		var LANGUAGE = "<?=$locale?>";
 		var WINDOW_LOADED = false;
 	</script>
 	<?=Asset::container('head')->scripts()?>
@@ -83,7 +83,7 @@ zsh
 
 
 	</header>
-	
+
 	<section id="content">
 		<?=!isset($content) ? '':$content?>
 	</section>

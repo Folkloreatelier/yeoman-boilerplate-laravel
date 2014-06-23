@@ -3,11 +3,11 @@
 class BaseController extends Controller {
 
 	protected $layout = 'layouts.main';
-	protected $language;
+	protected $locale;
 
 	public function __construct()
 	{
-		$this->language = Config::get('app.locale');
+		$this->locale = Config::get('app.locale');
 	}
 
 	/**
