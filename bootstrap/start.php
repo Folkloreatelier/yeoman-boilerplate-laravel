@@ -24,11 +24,29 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
-
-	'local' => array('*.local','*.CONNEXIO.CA'),
-
-));
+$env = $app->detectEnvironment(function() {
+	
+	$environments = array(
+		'local' => array('*.local.atelierfolklore.ca', '*.local', '*.connexio.ca')
+	);
+	
+	$hostName = strtolower(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '');
+	$machineName = strtolower(gethostname());
+	foreach ($environments as $key => $hosts)
+	{
+		foreach($hosts as $host)
+		{
+			if (str_is($host, $machineName) || (!empty($hostName) && str_is($host, $hostName)))
+			{
+				return $key;
+			}
+		}
+		
+	}
+	
+	return 'production';
+	
+});
 
 /*
 |--------------------------------------------------------------------------
